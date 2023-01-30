@@ -19,7 +19,7 @@ module.exports = {
 
     try {
       const outputFileName = removeCommonExtensionsFromFile(first)
-      await execSync(`ffmpeg -i "${first}" "${outputFileName}".wav`)
+      await execSync(`ffmpeg -y -i "${first}" "${outputFileName}".wav`)
       toolbox.print.success('Done!')
     } catch (error) {
       console.log(error)

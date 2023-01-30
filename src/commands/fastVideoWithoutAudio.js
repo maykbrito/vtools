@@ -20,7 +20,7 @@ module.exports = {
     try {
       const outputFileName = removeCommonExtensionsFromFile(first)
       await execSync(
-        `ffmpeg -i "${first}" -filter_complex "fps=fps=12,setpts=0.5*PTS" -an "${outputFileName}"-fast.mp4`
+        `ffmpeg -y -i "${first}" -filter_complex "fps=fps=12,setpts=0.5*PTS" -an "${outputFileName}"-fast.mp4`
       )
       toolbox.print.success('Done!')
     } catch (error) {
