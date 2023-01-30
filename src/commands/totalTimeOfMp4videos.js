@@ -10,7 +10,9 @@ async function getTotalTimeOfMP4Videos() {
   const totalHours = Math.floor(totalSeconds / 60 / 60) % 24
   const totalMinutes = Math.floor(totalSeconds / 60) % 60
   const totalSecondsMod = Math.floor(totalSeconds) % 60
-  return `${totalDays}:${totalHours.toString().padStart(2, '0')}:${totalMinutes
+  return `${totalDays} days ${totalHours
+    .toString()
+    .padStart(2, '0')}:${totalMinutes
     .toString()
     .padStart(2, '0')}:${totalSecondsMod.toString().padStart(2, '0')}`
 }
