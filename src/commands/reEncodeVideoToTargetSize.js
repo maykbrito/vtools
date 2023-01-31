@@ -1,5 +1,4 @@
 const { execSync } = require('child_process')
-const { removeCommonExtensionsFromFile } = require('../utils')
 
 async function reEncodeVideoToTargetSize(file, targetSize) {
   let T_SIZE = targetSize
