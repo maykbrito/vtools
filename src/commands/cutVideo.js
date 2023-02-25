@@ -10,18 +10,13 @@ module.exports = {
     const {
       parameters: {
         first,
-        options: { start, end },
+        options: { start = '00:00:00.000', end },
       },
       print: { error, success },
     } = toolbox
 
     if (!first) {
       error('File is needed')
-      return
-    }
-
-    if (!start) {
-      error('--start time is needed')
       return
     }
 
